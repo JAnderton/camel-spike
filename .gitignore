@@ -1,0 +1,9 @@
+# IDE specific folders
+.idea/
+*.iml
+
+# OS specific folders
+.DS_Store
+
+# Compiled code folders
+target/
