@@ -10,17 +10,19 @@ import java.util.Arrays;
 
 @SpringBootApplication
 public class Application {
+  private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
   public static void main(String[] args) {
-    final Logger logger = LoggerFactory.getLogger(Application.class);
     final ApplicationContext ctx = SpringApplication.run(Application.class, args);
 
-    logger.info("Let's inspect the beans provided by Spring Boot:");
+    logger.trace("Beans being loaded: ");
 
-    final String[] beanNames = ctx.getBeanDefinitionNames();
-    Arrays.sort(beanNames);
-    for (final String beanName : beanNames) {
-      logger.info(beanName);
+    if (logger.isTraceEnabled()) {
+      final String[] beanNames = ctx.getBeanDefinitionNames();
+      Arrays.sort(beanNames);
+      for (final String beanName : beanNames) {
+        logger.trace(beanName);
+      }
     }
   }
 
