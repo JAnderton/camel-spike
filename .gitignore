@@ -6,4 +6,7 @@
 .DS_Store
 
 # Compiled code folders
-target/
+build/
+
+# Build framework specific files
+.gradle/
