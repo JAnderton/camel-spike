@@ -9,6 +9,6 @@ public class CustomRoutes extends RouteBuilder {
   @Override
   public void configure() {
     from("mq:queue:input-queue")
-      .to("file:///Users/karun/workspace/camel-spike/output");
+      .to("file:///Users/me.karun/workspace/camel-spike/output");
   }
 }
