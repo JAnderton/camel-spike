@@ -1,3 +1,0 @@
-include 'perf-test'
-include 'camel-routes'
-

@@ -8,7 +8,8 @@ public class CustomRoutes extends RouteBuilder {
 
   @Override
   public void configure() {
-    from("mq:queue:input-queue")
-      .to("file:///Users/me.karun/workspace/camel-spike/output");
+    from("mq:queue:in")
+      .log("Message received")
+      .to("mq:queue:out");
   }
 }
