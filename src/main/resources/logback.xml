@@ -12,4 +12,5 @@
   <logger name="me.karun" level="DEBUG" />
   <logger name="org.springframework" level="WARN" />
   <logger name="org.eclipse.jetty" level="WARN" />
+  <logger name="org.apache" level="WARN" />
 </configuration>
